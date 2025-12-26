@@ -4,6 +4,7 @@ import './App.css'
 import { Descriptions } from './componentes/Descriptions.jsx'
 import {Barr} from './componentes/Barr.jsx'
 import {Projects} from './componentes/Projects.jsx'
+import { Newsletter} from './componentes/Newsletter.jsx'
 import "bootstrap/dist/css/bootstrap.min.css" ; 
 
 
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
 
   <Descriptions/>
   <Projects/>
+  <Newsletter/>
 
   </StrictMode>
 )

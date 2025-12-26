@@ -4,11 +4,11 @@ import { Col, Row, Alert } from "react-bootstrap";
 export const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
+  const [mensaje,setmensaje]=useState('');
 
 
   useEffect(() => {
-    if (status === 'success') clearFields();
-  }, [status])
+    if (status === 'success') clearFields();}, [status])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,37 +16,41 @@ export const Newsletter = ({ status, message, onValidated }) => {
     email.indexOf("@") > -1 &&
     onValidated({
       EMAIL: email ,
-      FNAME: firstName
+      FNAME: firstName,
+      GMAIL: mensaje,
     })
   }
 
   const clearFields = () => {
     setEmail('');
     setFirstName('');
+    setmensaje('');
   }
 
   return (
       <Col lg={12}>
-        <div className="newsletter-bx wow slideInUp">
+        <div className="newsletter-bx ">
           <Row>
             <Col lg={12} md={6} xl={5}>
-              <h3>Subscribete en mi  Newsletter<br></br> & no te pierdas de nuevas actualizaciones</h3>
+              <h3>Contactanos</h3>
+              <p>¿Listo para innovar con Lumajira?. Nuestro equipo de experto esta preparado para colaborar con su proximo gran desafio</p>
               {status === 'sending' && <Alert>Sending...</Alert>}
-              {status === 'error' && <Alert variant="danger">{typeof message === 'string' ? message : 'Ocurrió un error.'}</Alert>}
-              {status === 'success' && <Alert variant="success">{typeof message === 'string' ? message : '¡Suscripción exitosa!'}</Alert>}
+              {status === 'error' && <Alert variant="danger">{message}</Alert>}
+              {status === 'success' && <Alert variant="success">{message}</Alert>}
             </Col>
             <Col md={6} xl={7}>
               <form onSubmit={handleSubmit} className="form-botton" >
+                <div className="new-first-bx">
+                  <input value={firstName} type="text" onChange={(e) => setFirstName(e.target.value)} placeholder="Nombre" />
+                </div>
                 <div className="new-email-bx">
-             <input value={firstName} type="text" onChange={(e) => setFirstName(e.target.value)} placeholder="Nombre" />
+                  <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="xxxxx@gmail.com" />
                 </div>
-                </form>
-                
-                <form onSubmit={handleSubmit}>
-              <div className="new-email-bx">
-              <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
-                  <button type="submit">enviar</button>
+                <div className="new-mensaje-bx">
+                  <input value={mensaje} type="mensaje" onChange={(e) => setmensaje(e.target.value)} placeholder="¿Como podemos ayudarle?" />
                 </div>
+                <button type="submit">Enviar</button>
+
               </form>
             </Col>
           </Row>

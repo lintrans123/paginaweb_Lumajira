@@ -304,8 +304,307 @@ p.danger{
 
 /*Newletter*/
 
+/************ Newsletter Css ************/
+.newsletter-bx {
+  background: #081217;
+  border-radius: 30px;
+  padding: 60px 80px;
+  margin-bottom: 80px;
+  margin-top: -122px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
 
+.newsletter-bx::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
 
+.newsletter-bx h3 {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-bx p {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #ffffff5d;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Formulario */
+.newsletter-bx form {
+  position: relative;
+  z-index: 1;
+}
+
+.form-botton {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input de Nombre */
+.new-first-bx {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.new-first-bx:hover,
+.new-first-bx:focus-within {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.2);
+}
+
+.new-first-bx input {
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  padding: 15px 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Input de Email */
+.new-email-bx {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.new-email-bx:hover,
+.new-email-bx:focus-within {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.2);
+}
+
+.new-email-bx input {
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  padding: 15px 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Input de Mensaje */
+.new-mensaje-bx {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.new-mensaje-bx:hover,
+.new-mensaje-bx:focus-within {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.2);
+}
+
+.new-mensaje-bx input {
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  padding: 15px 20px;
+  font-size: 16px;
+  outline: none;
+  min-height: 80px;
+}
+
+/* Placeholders */
+.new-first-bx input::placeholder,
+.new-email-bx input::placeholder,
+.new-mensaje-bx input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.new-first-bx input::-webkit-input-placeholder,
+.new-email-bx input::-webkit-input-placeholder,
+.new-mensaje-bx input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.new-first-bx input::-moz-placeholder,
+.new-email-bx input::-moz-placeholder,
+.new-mensaje-bx input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botón de enviar */
+.newsletter-bx form button[type="submit"] {
+  background: linear-gradient(90.21deg, #34d399 -5.91%, #10b981 111.58%);
+  color: #1e3a4c;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(52, 211, 153, 0.3);
+  width: 100%;
+  margin-top: 10px;
+}
+
+.newsletter-bx form button[type="submit"]:hover {
+  background: linear-gradient(90.21deg, #10b981 -5.91%, #059669 111.58%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(52, 211, 153, 0.5);
+}
+
+.newsletter-bx form button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 15px rgba(52, 211, 153, 0.3);
+}
+
+/* Alerts de Bootstrap personalizados */
+.newsletter-bx .alert {
+  margin-top: 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 15px 20px;
+  border: none;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-bx .alert-success {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.newsletter-bx .alert-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .newsletter-bx {
+    padding: 50px 60px;
+    margin-top: -40px;
+    top: -30%;
+    
+  }
+  
+  .newsletter-bx h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .newsletter-bx {
+    padding: 40px 40px;
+    margin-top: -40px;
+    top: -50%;
+  }
+  
+  .newsletter-bx h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-bx {
+    padding: 35px 25px;
+    border-radius: 20px;
+      margin-top: -40px;
+    top: -50%;
+  }
+  
+  .newsletter-bx h3 {
+    font-size: 20px;
+  }
+  
+  .new-first-bx input,
+  .new-email-bx input,
+  .new-mensaje-bx input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .newsletter-bx form button[type="submit"] {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-bx {
+    padding: 30px 20px;
+      margin-top: -40px;
+    top: -50%;
+  }
+  
+  .newsletter-bx h3 {
+    font-size: 18px;
+    line-height: 1.3em;
+  }
+  
+  .new-first-bx input,
+  .new-email-bx input,
+  .new-mensaje-bx input {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+  
+  .newsletter-bx form button[type="submit"] {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
 
 
 
