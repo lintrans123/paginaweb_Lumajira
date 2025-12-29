@@ -28,8 +28,8 @@ export const Newsletter = ({ status, message, onValidated }) => {
   }
 
   return (
-      <Col lg={12}>
-        <div className="newsletter-bx ">
+      <Col lg={12} >
+        <div className="newsletter-bx " id="pricing">
           <Row>
             <Col lg={12} md={6} xl={5}>
               <h3>Contactanos</h3>

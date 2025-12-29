@@ -6,7 +6,7 @@ export const Descriptions = () =>{
 
 
     return(
-<section className="descriptions" id="descriptions">
+<section className="descriptions" id="home">
 <Container>
         <Row className="aligh-items-center">
            <Col >
