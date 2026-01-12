@@ -4,7 +4,7 @@ import { Projectscard } from "./Projectscard.jsx";
 import projImg1 from "../img/inyectora.png";
 import projImg2 from "../img/Protesis.png";
 import projImg3 from "../img/Agrilux.fondo.png";
-import servicies from "../img/impresion.jpg";
+import servicies from "../img/Impresion.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
